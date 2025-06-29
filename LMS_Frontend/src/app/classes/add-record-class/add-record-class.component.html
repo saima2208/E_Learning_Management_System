@@ -1,0 +1,65 @@
+
+<div class="body">
+  <div class="row">
+
+    <div class="col-left">
+      <app-admin-dashboard></app-admin-dashboard>
+    </div>
+
+
+    <div class="col-right">
+      <fieldset>
+        <h1>{{ isUpdate ? "Edit Record Class" : "Add Record Class" }}</h1>
+        <form (ngSubmit)="onSubmit()" #courseForm="ngForm">
+
+          <label for="courseName">Course ID</label>
+          <select name="courseName" [(ngModel)]="recordClass.courseName" required style="width: 100%;">
+            <option *ngFor="let course of cor" [value]="course.courseName">
+              {{ course.id }} - {{ course.courseName }}
+            </option>
+          </select>
+          <br />
+
+            <label for="lessonName">Lessons</label>
+          <select name="lessonName" [(ngModel)]="recordClass.lessonId" required style="width: 100%;">
+            <option *ngFor="let lessons of lesson" [value]="lessons.id">
+              {{ lessons.id }} - {{ lessons.topic }}
+            </option>
+          </select>
+          <br />
+
+
+                 <!-- Lesson Selection -->
+          <!-- <label for="lesson">Lesson</label>
+          <select name="lesson" [(ngModel)]="recordClass.lessonId" required style="width: 100%;">
+            <option *ngFor="let lesson of lessons" [value]="lesson.id">
+              {{ lesson.id }} - {{ lesson.lessonName }}
+            </option>
+          </select>
+          <br /> -->
+
+
+
+
+
+          <label for="videoUrl">Video URL</label>
+          <input
+            type="text"
+            name="videoUrl"
+            [(ngModel)]="recordClass.videoUrl"
+            placeholder="Enter Video URL"
+            required
+          />
+          <br />
+
+
+          <button type="submit">{{ isUpdate ? "Update Record" : "Add Record" }}</button>
+        </form>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+
+
+

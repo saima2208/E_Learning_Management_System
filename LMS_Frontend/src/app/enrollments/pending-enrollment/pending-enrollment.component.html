@@ -1,0 +1,32 @@
+<div class="body">
+  <div class="row">
+    <div class="col-3">
+      <app-admin-dashboard></app-admin-dashboard>
+    </div>
+
+    <div class="col-9">
+      <h2>Pending Enrollments</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Course Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let enrollment of pendingEnrollments">
+            <td data-label="Name">{{ enrollment.name }}</td>
+            <td data-label="Email">{{ enrollment.email }}</td>
+            <td data-label="Course Name">{{ enrollment.courseName }}</td>
+            <td data-label="Actions">
+              <button (click)="approveEnrollment(enrollment.id)" class="btn btn-success">Approve</button>
+              <button (click)="rejectEnrollment(enrollment.id)" class="btn btn-danger">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

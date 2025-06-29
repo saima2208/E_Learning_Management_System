@@ -1,0 +1,44 @@
+<section class="head">
+
+  <div class="card text-bg-dark">
+    <img src="https://cf.sbts.edu/boycecollege/uploads/2024/10/teachers_conference_panel_1280.jpg" class="card-img" alt="...">
+     <!-- <img src="Image/contact.jpg" class="card-img"  alt=""> -->
+    <div class="card-img-overlay">
+      <h1 class="card-title">Our Honorable Teachers Panel</h1>
+
+
+
+    </div>
+  </div>
+</section>
+
+<section class="list">
+  <div class="container">
+    <!-- <h1>Teacher List</h1> -->
+     @for (teachers of teacher; track teachers.name) {
+    <div class="card md-4 mb-5" style="max-width: 400px;">
+
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <img src="{{teachers.avatarUrl}}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-6">
+              <div>
+                <div class="card-title ">
+                  <h5>{{teachers.name}} </h5>
+                  <h6>Course:{{teachers.courseName}}</h6>
+                   <p>{{teachers.bio}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+          </div>
+
+        </div>
+      }
+  </div>
+
+
+</section>

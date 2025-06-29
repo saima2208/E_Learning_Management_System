@@ -1,0 +1,324 @@
+/* Video Section Enhancements */
+.card.text-bg-dark {
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(14, 14, 14);
+  background-color: black;
+  object-fit: cover;
+ filter: brightness(100%);
+}
+
+.card-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+.video .card-img-overlay h1 {
+  font-size: 3.7rem;
+  margin-bottom: 0.5rem;
+  margin-top: 150px;
+  font-weight: bold;
+  color: rgb(36, 27, 163);
+  text-align: center;
+}
+
+.video .card-img-overlay h3 {
+  font-size: 2.7rem;
+  margin-top: 0;
+  text-align: center;
+  color: rgb(198, 219, 39);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+
+/* .video .card-img-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.video .card-img-overlay h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  margin-top: 0.5rem;
+  text-align: center;
+} */
+
+/* Course Section Updates */
+.course h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+
+
+/* Course Section Styles */
+.course {
+  background-color: #f9f9f9; /* Light background for the section */
+  padding: 40px 20px;
+  text-align: center;
+
+}
+
+.course h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  overflow: hidden;
+  border-radius: 16px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  max-height: 200px;
+  object-fit: cover; /* Ensure the image covers the card without distortion */
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.card-text.text-success {
+  font-weight: bold;
+}
+
+/* Buttons */
+.button-container .btn {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container .btn-success {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+}
+
+.button-container .btn-success:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.button-container .btn-enroll {
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+}
+
+.button-container .btn-enroll:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .button-container .btn {
+    font-size: 0.85rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-img-top {
+    max-height: 150px;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-text {
+    font-size: 0.8rem;
+  }
+
+  .button-container .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Feedback Section Placeholder */
+/* .feedback {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.feedback::before {
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #666;
+} */
+
+
+
+/* General Section Styling */
+.feedback {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.feedback h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Feedback Container Styling */
+.feedback-container {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+}
+
+/* .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+
+/* User Image */
+.user-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feedback-container .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-image {
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback {
+    padding: 1rem;
+  }
+
+  .feedback h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+}

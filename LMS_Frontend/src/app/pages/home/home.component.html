@@ -1,0 +1,103 @@
+<section class="video">
+  <div class="card text-bg-dark">
+
+    <!-- <img src="https://roboticsbiz.com/wp-content/uploads/2023/09/technology.jpg" class="card-img" alt="..."> -->
+    <!-- <img src="Image/contact.jpg" class="card-img"  alt=""> -->
+    <video class="video" src="https://videos.pexels.com/video-files/6996523/6996523-uhd_2560_1440_30fps.mp4" autoplay
+      loop muted></video>
+    <div class="card-img-overlay">
+      <h1>Welcome to educare</h1>
+
+      <!-- <h3>Education for the Digital Age.</h3> -->
+      <h3>A Comprehensive Online Learning Platform
+      </h3>
+
+    </div>
+  </div>
+</section>
+
+<section class="course">
+  <h1>Checkout New Releases Of Our Courses</h1>
+
+  <div class="course">
+    <div class="row mt-4">
+      <!-- Use *ngFor with slice pipe to display only the first 4 courses -->
+      <div class="col-md-4 mb-4" *ngFor="let course of course | slice:0:3">
+        <div class="card shadow-lg rounded-4">
+          <!-- Course Image -->
+          <img [src]="course.image" class="card-img-top img-fluid book-image" alt="Course Image">
+
+          <div class="card-body text-center">
+            <!-- Course Name -->
+            <h5 class="card-title fw-bold text-primary">{{ course.courseName }}</h5>
+
+            <!-- Short description -->
+            <p class="card-text text-muted">✍️ {{ course.description }}</p>
+
+            <!-- Course Price -->
+            <p class="card-text text-success">💲 <strong>Price:</strong> ${{ course.price }}</p>
+
+            <!-- View Details and Enroll Buttons -->
+            <div class="button-container">
+              <a href="/course-details" class="btn btn-success shadow-sm fw-bold">Details</a>
+              <!-- <a [routerLink]="'/enroll'" [queryParams]="{ title: course.courseName }"
+              class="btn btn-success shadow-sm fw-bold">
+              Enroll
+            </a> -->
+
+              <a [routerLink]="'/enroll'" [queryParams]="{ title: course.courseName, studentName: student.name }"
+                class="btn btn-success shadow-sm fw-bold">
+                Enroll
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="courses">See More</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="feedback">
+  <h1>Students Feedback</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let feedback of feedbacks">
+        <div class="card shadow-lg rounded-4">
+          <!-- User Image -->
+          <img [src]="feedback.image || 'UserImage\blank.jpg'" alt="{{ feedback.studentName }}" />
+
+          <!-- <img
+            [src]="feedback.image"
+            class="user-image"
+            alt="{{ feedback.studentName }}" -->
+
+
+          <div class="card-content p-3">
+            <!-- User Name -->
+            <h5 class="card-title fw-bold text-primary">
+              {{ feedback.studentName }}
+            </h5>
+
+            <!-- Feedback Content -->
+            <p class="card-text text-muted mb-2">✍️ {{ feedback.content }}</p>
+
+            <!-- Feedback Rating -->
+            <p class="card-text text-success mb-1">
+              <strong>Rating:</strong> {{ feedback.stars }}
+            </p>
+
+            <!-- Feedback Date -->
+            <p class="card-text text-secondary">
+              <small>{{ feedback.createdAt | date: 'medium' }}</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
